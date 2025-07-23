@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Project</title>
+    <link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./public/css/plugins-css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./public/css/output.css">
+    <style>
+       
+        /* *{
+            display: grid;
+            grid-template-rows: minmax(0,456px) auto;
+        } */
+    </style>
+</head>
+<body class="custom-scrollbar min-h-screen w-full bg-gradient-to-br from-gray-950 via-slate-900 to-gray-800 grid [grid-template-columns:250px_1fr] max-lg:grid-cols-1 max-lg:[grid-template-rows:60px_1fr]">
+    <header class="lg:hidden flex justify-between items-center bg-gray-900 px-5 drop-shadow-[0_1px_2px_rgba(200,200,200,0.3)]">
+        <div>
+            <a href="#" class="logo  flex items-center justify-center gap-2">
+            <div class="relative w-11 h-7 p-[3px] rounded-lg bg-gradient-to-r from-blue-500 to-white">
+                <div class="bg-gray-900 rounded-lg w-full h-full flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" 
+                        viewBox="0 0 24 24" 
+                        fill="blue" 
+                        class="w-3.5 h-3.5">
+                    <path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.4 8.172L12 18.897l-7.334 3.872 1.4-8.172-5.934-5.787 8.2-1.192z"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="flex items-baseline justify-center uppercase gap-px">
+                <span class="bg-gradient-to-r from-blue-500 to-white bg-clip-text text-transparent text-base font-bold">g:</span>
+                <span class="font-black bg-gradient-to-r from-purple-500 to-white bg-clip-text text-transparent text-lg">platform</span>
+            </div>
+        </a>
+        </div>
+        <button id="btn-menu" class="size-10 cursor-pointer flex justify-center items-center flex-col gap-[5px] overflow-hidden outline-0 focus:outline-0">
+            <span class="line line-1 block w-6 h-[3px] bg-gray-200 transition-transform"></span>
+            <span class="line line-2 block  w-6 h-[3px] bg-gray-200 transition-all"></span>
+            <span class="line line-3 block w-6 h-[3px] bg-gray-200 transition-transform"></span>
+        </button>
+    </header>
+    <!-- Sidebar -->
+    <aside id="aside" class="sticky top-0 h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-800 drop-shadow-[1px_0_2px_rgba(200,200,200,0.3)] max-lg:fixed max-lg:top-0 max-lg:w-64 max-lg:bottom-0 max-lg:left-0 max-lg:-translate-x-64 p-5 transition-transform flex flex-col items-start z-50">
+        <a href="#" class="logo mt-5 flex items-center justify-center gap-2">
+            <div class="relative w-11 h-7 p-[3px] rounded-lg bg-gradient-to-r from-blue-500 to-white">
+                <div class="bg-gray-900 rounded-lg w-full h-full flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" 
+                        viewBox="0 0 24 24" 
+                        fill="blue" 
+                        class="w-3.5 h-3.5">
+                    <path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.4 8.172L12 18.897l-7.334 3.872 1.4-8.172-5.934-5.787 8.2-1.192z"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="flex items-baseline justify-center uppercase gap-px">
+                <span class="bg-gradient-to-r from-blue-500 to-white bg-clip-text text-transparent text-base font-bold">g:</span>
+                <span class="font-black bg-gradient-to-r from-purple-500 to-white bg-clip-text text-transparent text-lg">platform</span>
+            </div>
+        </a>
+        <ul class="aside__menu overflow-x-hidden overflow-y-auto flex-1 w-full mt-7 space-y-4">
+            <li class="w-full">
+                <a href="#" class="w-full px-2 py-1.5 transition hover:bg-gray-700 rounded-sm flex items-center justify-start gap-2 text-gray-300">
+                    <i class="fa fa-home fa-sm"></i>
+                    <span class="capitalize text-sm font-medium">home</span>
+                </a>
+            </li>
+            <li class="w-full">
+                <a href="#" class="w-full px-2 py-1.5 transition hover:bg-gray-700  rounded-sm flex items-center justify-start gap-2 text-gray-300">
+                    <i class="fa fa-th-large fa-sm"></i>
+                    <span class="capitalize text-sm font-medium">category</span>
+                </a>
+            </li>
+            <li class="w-full">
+                <a href="#" class="w-full px-2 py-1.5 transition hover:bg-gray-700  rounded-sm flex items-center justify-start gap-2 text-gray-300">
+                    <i class="fa fa-book fa-sm"></i>
+                    <span class="capitalize text-sm font-medium">library</span>
+                </a>
+            </li>
+            <li class="w-full">
+                <a href="#" class="w-full px-2 py-1.5 transition hover:bg-gray-700  rounded-sm flex items-center justify-start gap-2 text-gray-300">
+                    <i class="fa fa-users fa-sm"></i>
+                    <span class="capitalize text-sm font-medium">friends</span>
+                </a>
+            </li>
+            <li class="w-full">
+                <a href="#" class="w-full px-2 py-1.5 transition hover:bg-gray-700  rounded-sm flex items-center justify-start gap-2 text-gray-300">
+                    <i class="fa fa-download fa-sm"></i>
+                    <span class="capitalize text-sm font-medium">downloads</span>
+                </a>
+            </li>
+            <li class="w-full">
+                <a href="#" class="w-full px-2 py-1.5 transition hover:bg-gray-700  rounded-sm flex items-center justify-start gap-2 text-gray-300">
+                    <i class="fa fa-shopping-bag fa-sm"></i>
+                    <span class="capitalize text-sm font-medium">buys</span>
+                </a>
+            </li>
+            <li class="w-full">
+                <a href="#" class="w-full px-2 py-1.5 transition hover:bg-gray-700  rounded-sm flex items-center justify-start gap-2 text-gray-300">
+                    <i class="fa fa-heart fa-sm"></i>
+
+                    <span class="capitalize text-sm font-medium">wishlist</span>
+                </a>
+            </li>
+        </ul>
+        <div class="aside__footer w-full mt-9 flex justify-between items-center gap-3">
+            <img class="w-12 h-12 rounded-sm object-cover" src="./public/images/2.jpg">
+            <div class="flex flex-col grow">
+                <span class="text-sm font-medium font-Raleway text-gray-100">arash</span>
+                <span class="max-w-35 line-clamp-1 truncate block font-medium text-xs font-Poppins text-gray-100">eshkevar.arash1387@gmail.com</span>
+            </div>
+        </div>
+    </aside>
+    <!-- Main Content -->
+    <main class="bg-gradient-to-br from-gray-950 via-slate-900 to-gray-800 p-5 grid grid-cols-1 gap-20">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-3 [grid-template-rows:minmax(0,_200px)_160px] xx:[grid-template-rows:minmax(0,_256px)_160px] mobile:[grid-template-rows:minmax(0,_300px)_160px] sm:[grid-template-rows:minmax(0,_356px)_160px] md:[grid-template-rows:minmax(0,_400px)_160px] lg:[grid-template-rows:minmax(0,_456px)] ">
+            <section class="slider-section lg:col-span-3 lg:h-full">
+                <div class="swiper mySwiper-top h-full">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide relative">
+                            <img class="relative w-[90%] h-full max-sm:w-full mx-auto rounded-2xl" src="./public/images/poster/thumbbig-632011.webp">
+                            <div class="absolute z-10 top-0 left-0 w-full h-full bg-gradient-to-t from-black to-transparent rounded-2xl overflow-hidden flex items-end pb-1">
+                                <div class="w-9/10 mx-auto flex items-end justify-between ">
+                                    <p class="mySlider-top__caption leading-6 text-gray-300 text-sm line-clamp-3 w-50 pl-5 max-sm:hidden">
+                                        “Step into the neon-lit future! Hack, fight, and build your digital empire in a city of chaos. Upgrade your skills, collect high-tech gear, and rule the cyber underworld. Are you ready for the ultimate battle?”
+                                    </p>
+                                    <div class="flex items-center gap-2">
+                                        <button class="mySlider-top__btn-buy px-3 [&>*]:text-sm max-mobile:[&>*]:text-xs [&>*]:font-medium rounded-sm cursor-pointer gap-2 text-white h-9 max-mobile:h-8 bg-gradient-to-r from-blue-600 to-blue-300 outline-0 focus:outline-0 flex items-center justify-between">
+                                            <span class="pr-2 max-mobile:pr-0">Buy now</span>
+                                            <span class="h-6 max-mobile:h-5 block mr-1 max-mobile:mr-0 w-0.5 bg-gradient-to-b from-blue-500 to-blue-100"></span>
+                                            <span class="font-Raleway">$24.00</span>
+                                            <span class="font-Raleway line-through">$35.00</span>
+                                        </button>
+                                        <button class="mySlider-top__btn-wish text-lg max-mobile:text-sm transition-colors text-gray-400 flex items-center justify-center size-9 max-mobile:size-8 bg-gray-800 rounded-sm cursor-pointer">
+                                            <i class="fa fa-heart"></i>
+                                        </button>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide relative">
+                            <img class="relative w-[90%] max-sm:w-full mx-auto rounded-2xl" src="./public/images/poster/thumbbig-1336452.webp">
+                            <div class="absolute z-10 top-0 left-0 w-full h-full bg-gradient-to-t from-black to-transparent rounded-2xl overflow-hidden flex items-end pb-1">
+                                <div class="w-9/10 mx-auto flex items-end justify-between ">
+                                    <p class="mySlider-top__caption leading-6 text-gray-300 text-sm line-clamp-3 w-50 pl-5 max-sm:hidden">
+                                        “Forge your team and dive into a dark, legendary world! Face epic bosses, craft strategies, and rise as the ultimate hero. Can you save the realm from eternal darkness?”
+                                    </p>
+                                    <div class="flex items-center gap-2">
+                                        <button class="mySlider-top__btn-buy px-3 [&>*]:text-sm max-mobile:[&>*]:text-xs [&>*]:font-medium rounded-sm cursor-pointer gap-2 text-white h-9 max-mobile:h-8 bg-gradient-to-r from-blue-600 to-blue-300 outline-0 focus:outline-0 flex items-center justify-between">
+                                            <span class="pr-2 max-mobile:pr-0">Buy now</span>
+                                            <span class="h-6 max-mobile:h-5 block mr-1 max-mobile:mr-0 w-0.5 bg-gradient-to-b from-blue-500 to-blue-100"></span>
+                                            <span class="font-Raleway">$23.00</span>
+                                            <span class="font-Raleway line-through">$30.00</span>
+                                        </button>
+                                        <button class="mySlider-top__btn-wish text-lg max-mobile:text-sm transition-colors text-gray-400 flex items-center justify-center size-9 max-mobile:size-8 bg-gray-800 rounded-sm cursor-pointer">
+                                            <i class="fa fa-heart"></i>
+                                        </button>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide relative">
+                            <img class="relative w-[90%] max-sm:w-full mx-auto rounded-2xl" src="./public/images/poster/thumbbig-1369831.webp">
+                            <div class="absolute z-10 top-0 left-0 w-full h-full bg-gradient-to-t from-black to-transparent rounded-2xl overflow-hidden flex items-end pb-1">
+                                <div class="w-9/10 mx-auto flex items-end justify-between ">
+                                    <p class="mySlider-top__caption leading-6 text-gray-300 text-sm line-clamp-3 w-50 pl-5 max-sm:hidden">
+                                        “Feel the adrenaline of endless speed! Choose your dream car, burn rubber, and dominate neon streets. Compete online and become the drift king. Are you ready to race?”
+                                    </p>
+                                    <div class="flex items-center gap-2">
+                                        <button class="mySlider-top__btn-buy px-3 [&>*]:text-sm max-mobile:[&>*]:text-xs [&>*]:font-medium rounded-sm cursor-pointer gap-2 text-white h-9 max-mobile:h-8 bg-gradient-to-r from-blue-600 to-blue-300 outline-0 focus:outline-0 flex items-center justify-between">
+                                            <span class="pr-2 max-mobile:pr-0">Buy now</span>
+                                            <span class="h-6 max-mobile:h-5 block mr-1 max-mobile:mr-0 w-0.5 bg-gradient-to-b from-blue-500 to-blue-100"></span>
+                                            <span class="font-Raleway">$79.00</span>
+                                            <span class="font-Raleway line-through">$85.00</span>
+                                        </button>
+                                        <button class="mySlider-top__btn-wish text-lg max-mobile:text-sm transition-colors text-gray-400 flex items-center justify-center size-9 max-mobile:size-8 bg-gray-800 rounded-sm cursor-pointer">
+                                            <i class="fa fa-heart"></i>
+                                        </button>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide relative">
+                            <img class="relative w-[90%] max-sm:w-full mx-auto rounded-2xl" src="./public/images/poster/thumbbig-1371030.webp">
+                            <div class="absolute z-10 top-0 left-0 w-full h-full bg-gradient-to-t from-black to-transparent rounded-2xl overflow-hidden flex items-end pb-1">
+                                <div class="w-9/10 mx-auto flex items-end justify-between ">
+                                    <p class="mySlider-top__caption leading-6 text-gray-300 text-sm line-clamp-3 w-50 pl-5 max-sm:hidden">
+                                        “The war has begun! Grab your weapon, join the frontline, and conquer the battlefield. With stunning graphics and intense combat, only the strongest survive. Will you lead your squad to victory?”
+                                    </p>
+                                    <div class="flex items-center gap-2">
+                                        <button class="mySlider-top__btn-buy px-3 [&>*]:text-sm max-mobile:[&>*]:text-xs [&>*]:font-medium rounded-sm cursor-pointer gap-2 text-white h-9 max-mobile:h-8 bg-gradient-to-r from-blue-600 to-blue-300 outline-0 focus:outline-0 flex items-center justify-between">
+                                            <span class="pr-2 max-mobile:pr-0">Buy now</span>
+                                            <span class="h-6 max-mobile:h-5 block mr-1 max-mobile:mr-0 w-0.5 bg-gradient-to-b from-blue-500 to-blue-100"></span>
+                                            <span class="font-Raleway">$63.00</span>
+                                            <span class="font-Raleway line-through">$69.00</span>
+                                        </button>
+                                        <button class="mySlider-top__btn-wish text-lg max-mobile:text-sm transition-colors text-gray-400 flex items-center justify-center size-9 max-mobile:size-8 bg-gray-800 rounded-sm cursor-pointer">
+                                            <i class="fa fa-heart"></i>
+                                        </button>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide relative">
+                            <img class="relative w-[90%] max-sm:w-full mx-auto rounded-2xl" src="./public/images/poster/thumbbig-877849.webp">
+                            <div class="absolute z-10 top-0 left-0 w-full h-full bg-gradient-to-t from-black to-transparent rounded-2xl overflow-hidden flex items-end pb-1">
+                                <div class="w-9/10 mx-auto flex items-end justify-between ">
+                                    <p class="mySlider-top__caption leading-6 text-gray-300 text-sm line-clamp-3 w-50 pl-5 max-sm:hidden">
+                                        “Explore uncharted galaxies! Pilot your starship, fight alien invaders, and gather rare resources. This space adventure will take you beyond the stars. Are you prepared for the unknown?”
+                                    </p>
+                                    <div class="flex items-center gap-2">
+                                        <button class="mySlider-top__btn-buy px-3 [&>*]:text-sm max-mobile:[&>*]:text-xs [&>*]:font-medium rounded-sm cursor-pointer gap-2 text-white h-9 max-mobile:h-8 bg-gradient-to-r from-blue-600 to-blue-300 outline-0 focus:outline-0 flex items-center justify-between">
+                                            <span class="pr-2 max-mobile:pr-0">Buy now</span>
+                                            <span class="h-6 max-mobile:h-5 block mr-1 max-mobile:mr-0 w-0.5 bg-gradient-to-b from-blue-500 to-blue-100"></span>
+                                            <span class="font-Raleway">$24.00</span>
+                                            <span class="font-Raleway line-through">$35.00</span>
+                                        </button>
+                                        <button class="mySlider-top__btn-wish text-lg max-mobile:text-sm transition-colors text-gray-400 flex items-center justify-center size-9 max-mobile:size-8 bg-gray-800 rounded-sm cursor-pointer">
+                                            <i class="fa fa-heart"></i>
+                                        </button>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </section>
+            <section class="avatar text-gray-100 shadow-sm shadow-white p-3 lg:col-span-1  lg:h-full flex flex-col  gap-10">
+                    <input id="search-friend-input" type="text" class="w-full max-w-100 mx-auto h-8 border-2 border-gray-700 focus:ring-2 ring-gray-700 overflow-hidden rounded-sm text-gray-300 text-xs outline-0 px-3  py-2 bg-gray-800">
+                    <div id="friends" class="lg:h-full overflow-y-hidden overflow-x-auto max-lg:pb-5 lg:overflow-y-auto lg:overflow-x-hidden flex lg:flex-col gap-7 max-lg:grid max-lg:grid-flow-col auto-cols-max">
+                        <div class="friend flex gap-3 items-center">
+                            <img class="size-12 rounded-sm" src="./public/images/4.jpg" alt="">
+                            <div class="text-sm grow flex flex-col gap-1">
+                                <span class="friend__username truncate block w-35">Lorem, ipsum dolor sit amet consectetur adipisicing.</span>
+                                <div class="flex gap-1">
+                                    <button class="friend__btn-join py-1 px-2 rounded-sm cursor-pointer focus:ring-1 focus:ring-blue-200 bg-blue-400 text-white text-xs">join</button>
+                                    <button class="friend__btn-playing py-1 px-2 rounded-sm cursor-pointer focus:ring-1 focus:ring-gray-100 bg-gray-100 text-gray-800 text-xs">playing</button>
+                                    <button class="friend__btn-ofline py-1 px-2 rounded-sm cursor-pointer focus:ring-1 focus:ring-gray-400 bg-gray-700 text-white text-xs">offline</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+        </div>
+        <section class="trending  overflow-hidden relative">
+            <div class="swiper mySwiper-trending relative">
+                
+                <!-- دکمه‌ها بالا سمت راست -->
+                <div class="absolute top-5 w-full flex items-center justify-between  z-10">
+                    <h3 class="text-xl text-gray-100 font-medium mr-auto capitalize px-2">trending</h3>
+                    <div class="gap-2 mt-2 mr-2 flex">
+                        <div class="swiper-button-prev !static !relative !top-0 !left-0"></div>
+                        <div class="swiper-button-next !static !relative !top-0 !left-0"></div>
+                    </div>
+                </div>
+
+                <div class="swiper-wrapper pt-16">
+                    <div class="swiper-slide px-px  hover:bg-gray-600 rounded-lg overflow-hidden">
+                        <div class="flex flex-col w-full">
+                            <a href="#" class="cursor-pointer block">
+                                <img class="w-full mt-px rounded-lg object-cover max-h-[163px]" src="./public/images/game/1.jpg" alt="">
+                                <div class="slide__body mt-4 p-1 capitalize space-y-1">
+                                    <h4 class="text-lg text-gray-100 font-medium">title</h4>
+                                    <p class="line-clamp-3 text-sm font-medium text-gray-300 capitalize mb-4 min-h-15 overflow-hidden">Lorem ipsum dolor </p>
+                                </div>
+                            </a>
+                            <div class="slide__footer pb-1 mt-auto">
+                                <button class="slide__btn font-Raleway font-stretch-normal text-sm bg-gradient-to-r from-blue-800 to-blue-500 text-white cursor-pointer hover:bg-blue-700 py-2 px-3 rounded-sm">$62.00</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-px   hover:bg-gray-600 rounded-lg overflow-hidden">
+                        <div class="flex flex-col w-full">
+                            <a href="#" class="cursor-pointer block">
+                                <img class="w-full mt-px rounded-lg object-cover max-h-[163px]" src="./public/images/game/2.jpg" alt="">
+                                <div class="slide__body mt-4 p-1 capitalize space-y-1">
+                                    <h4 class="text-lg text-gray-100 font-medium">title</h4>
+                                    <p class="line-clamp-3 text-sm font-medium text-gray-300 capitalize mb-4 min-h-15 overflohi">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo sint libero laboriosam obcaecati accusamus, animi ducimus quod, nisi sed blanditiis voluptates? Enim deserunt repellendus voluptatibus commodi ipsa sequi maiores quaerat eligendi dolores expedita ducimus architecto incidunt, nihil nulla laboriosam maxime quasi tempora soluta cupiditate at! Aperiam sapiente repellat consequuntur modi.</p>
+                                </div>
+                            </a>
+                            <div class="slide__footer pb-1 mt-auto">
+                                <button class="slide__btn font-Raleway font-stretch-normal text-sm bg-gradient-to-r from-blue-800 to-blue-500 text-white cursor-pointer hover:bg-blue-700 py-2 px-3 rounded-sm">$62.00</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-px   hover:bg-gray-600 rounded-lg overflow-hidden">
+                        <div class="flex flex-col w-full">
+                            <a href="#" class="cursor-pointer block">
+                                <img class="w-full mt-px rounded-lg object-cover max-h-[163px]" src="./public/images/game/4.jpg" alt="">
+                                <div class="slide__body mt-4 p-1 capitalize space-y-1">
+                                    <h4 class="text-lg text-gray-100 font-medium">title</h4>
+                                    <p class="line-clamp-3 text-sm font-medium text-gray-300 capitalize mb-4 min-h-15 overflohi">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo sint libero laboriosam obcaecati accusamus, animi ducimus quod, nisi sed blanditiis voluptates? Enim deserunt repellendus voluptatibus commodi ipsa sequi maiores quaerat eligendi dolores expedita ducimus architecto incidunt, nihil nulla laboriosam maxime quasi tempora soluta cupiditate at! Aperiam sapiente repellat consequuntur modi.</p>
+                                </div>
+                            </a>
+                            <div class="slide__footer pb-1 mt-auto">
+                                <button class="slide__btn font-Raleway font-stretch-normal text-sm bg-gradient-to-r from-blue-800 to-blue-500 text-white cursor-pointer hover:bg-blue-700 py-2 px-3 rounded-sm">$62.00</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-px   hover:bg-gray-600 rounded-lg overflow-hidden">
+                        <div class="flex flex-col w-full">
+                            <a href="#" class="cursor-pointer block">
+                                <img class="w-full mt-px rounded-lg object-cover max-h-[163px]" src="./public/images/game/9.jpg" alt="">
+                                <div class="slide__body mt-4 p-1 capitalize space-y-1">
+                                    <h4 class="text-lg text-gray-100 font-medium">title</h4>
+                                    <p class="line-clamp-3 text-sm font-medium text-gray-300 capitalize mb-4 min-h-15 overflohi">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo sint libero laboriosam obcaecati accusamus, animi ducimus quod, nisi sed blanditiis voluptates? Enim deserunt repellendus voluptatibus commodi ipsa sequi maiores quaerat eligendi dolores expedita ducimus architecto incidunt, nihil nulla laboriosam maxime quasi tempora soluta cupiditate at! Aperiam sapiente repellat consequuntur modi.</p>
+                                </div>
+                            </a>
+                            <div class="slide__footer pb-1 mt-auto">
+                                <button class="slide__btn font-Raleway font-stretch-normal text-sm bg-gradient-to-r from-blue-800 to-blue-500 text-white cursor-pointer hover:bg-blue-700 py-2 px-3 rounded-sm">$62.00</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide px-px   hover:bg-gray-600 rounded-lg overflow-hidden">
+                        <div class="flex flex-col w-full">
+                            <a href="#" class="cursor-pointer block">
+                                <img class="w-full mt-px rounded-lg object-cover max-h-[163px]" src="./public/images/game/1.jpg" alt="">
+                                <div class="slide__body mt-4 p-1 capitalize space-y-1">
+                                    <h4 class="text-lg text-gray-100 font-medium">title</h4>
+                                    <p class="line-clamp-3 text-sm font-medium text-gray-300 capitalize mb-4 min-h-15 overflohi">Lorem ipsum dolor, sit amet consectetu. Quo sint libero laboriosam</p>
+                                </div>
+                            </a>
+                            <div class="slide__footer pb-1 mt-auto">
+                                <button class="slide__btn font-Raleway font-stretch-normal text-sm bg-gradient-to-r from-blue-800 to-blue-500 text-white cursor-pointer hover:bg-blue-700 py-2 px-3 rounded-sm">$62.00</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    ><script src="./public/js/plugins-js/swiper-bundle.min.js"></script>
+    <script src="./public/js/script.js"></script>
+</body>
+
+</html>

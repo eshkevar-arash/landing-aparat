@@ -1,0 +1,17 @@
+{
+  "name": "landing-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./src/tailwind.css -o ./public/css/output.css",
+    "dev": "tailwindcss -i ./src/tailwind.css -o ./public/css/output.css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.11",
+    "font-awesome": "^4.7.0",
+    "tailwindcss": "^4.1.11"
+  }
+}
